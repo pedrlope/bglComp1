@@ -1,6 +1,5 @@
-# bglComp1
+#bgl comp1
 
-calculadora:
 
 #include <stdio.h>
 #include <stdio.h>
@@ -9,8 +8,9 @@ calculadora:
 int main()
 {
     int escolha, escolha2, objeto;
-    float num, sum, sub, mul, di, elevacao, i,j, raio, altura, base, lado, area;
+    float num, sum, sub, mul, di, elevacao, i,j, raio, altura, base, lado, area, volume;
     double nums;
+    char escolha3;
     printf("bem vindo a caluladora de matematica\n");
     printf("digite qual operacao deseja fazer\n");
     printf("1 - soma  2 - subtracao 3 - multiplicacao 4 - divisao 5 - formulas geometricas \n");
@@ -121,6 +121,24 @@ int main()
             case 3:
             if(objeto ==0)
             {
+                printf(" e um Circulo ou cIlindro?")
+                scanf("%c", escolha3);
+                if("C")
+                {
+                printf("digite o raio da esfera");
+                scanf("%f", raio);
+                volume = 4/3*(PI*powf(raio,3));
+                printf("o volume da esfera eh %f", volume);
+                }
+                else
+                {
+                    printf("digite o raio da base e a altura");
+                    scanf("%f  %f", raio, altura);
+                    volume = powf(raio,2)*altura*PI
+                }
+            }
+            
+            else{
                 
             }
             
