@@ -1,4 +1,8 @@
-# bgl comp1
+# BGL COMP1
+
+
+
+
 
 
 #include <stdio.h>
@@ -95,7 +99,7 @@ int main()
                 area= (PI*powf(raio,2));
                 printf("area eh %f \n", area);
             }
-            if(objeto ==4 )
+            else if(objeto ==4 )
             {
                 printf("digite os lados \n");
                 scanf("%f",&lado);
@@ -121,20 +125,20 @@ int main()
             case 3:
             if(objeto ==0)
             {
-                printf(" e um Circulo ou cIlindro?")
-                scanf("%c", escolha3);
-                if("C")
+                printf(" eh um Circulo ou cIlindro?");
+                scanf(" %c", &escolha3);
+                if(escolha 3 == 'C')
                 {
                 printf("digite o raio da esfera");
-                scanf("%f", raio);
-                volume = 4/3*(PI*powf(raio,3));
+                scanf("%f", &raio);
+                volume = (4.0f / 3.0f)*(PI*powf(raio,3));
                 printf("o volume da esfera eh %f", volume);
                 }
                 else
                 {
                     printf("digite o raio da base e a altura");
-                    scanf("%f  %f", raio, altura);
-                    volume = powf(raio,2)*altura*PI
+                    scanf("%f  %f", &raio, &altura);
+                    volume = powf(raio,2)*altura*PI;
                 }
             }
             
