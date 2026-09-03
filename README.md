@@ -1,4 +1,4 @@
-#bgl comp1
+# bgl comp1
 
 
 #include <stdio.h>
