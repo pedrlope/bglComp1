@@ -2,17 +2,14 @@
 
 
 
-
-
-
 #include <stdio.h>
 #include <stdio.h>
 #include <math.h>
 #define PI 3.14
 int main()
 {
-    int escolha, escolha2, objeto;
-    float num, sum, sub, mul, di, elevacao, i,j, raio, altura, base, lado, area, volume;
+    int escolha, escolha2, objeto, D3, faces;
+    float num, sum, sub, mul, di, elevacao, i,j, raio, altura, alturaface, base, lado, area, volume;
     double nums;
     char escolha3;
     printf("bem vindo a caluladora de matematica\n");
@@ -81,6 +78,7 @@ int main()
             }
             else
             {
+                sum=0;
                 for(objeto; objeto>0;objeto--)
                 {
                     printf("digite o valor do lado %d \n", objeto);
@@ -125,9 +123,9 @@ int main()
             case 3:
             if(objeto ==0)
             {
-                printf(" eh um Circulo ou cIlindro?");
+                printf(" eh uma Esfera ou Cilindro?");
                 scanf(" %c", &escolha3);
-                if(escolha 3 == 'C')
+                if(escolha3 == 'E')
                 {
                 printf("digite o raio da esfera");
                 scanf("%f", &raio);
@@ -142,7 +140,31 @@ int main()
                 }
             }
             
-            else{
+            else if (objeto >0){
+                
+                printf("digite 1 para piramide e 2 para outras formas");
+                scanf("%d", &D3);
+                
+                if(D3 == 1)
+                {
+                    printf("digite os lado da base e a altura");
+                    scanf("%f  %f", &lado, &altura);
+                    volume = (lado*lado*altura)/3;
+                    printf("o volume eh : %f", volume);
+                }
+                
+                else
+                {
+                    printf("digite o numero de faces");
+                    scanf("%d", &faces);
+                    printf("digite a altura da face e a base");
+                    scanf("%f %f ", &alturaface, &lado);
+                    printf("digite a altura do poliedro");
+                    scanf("%f", &altura);
+                    area = (alturaface*lado)/2;
+                    volume = (faces*area*altura)/3;
+                    printf("volume eh : %f", volume);
+                }
                 
             }
             
