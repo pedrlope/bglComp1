@@ -1,4 +1,4 @@
-# BGL COMP1
+# BGL COMP 1
 
 
 #include <stdio.h>
@@ -7,8 +7,8 @@
 #define PI 3.14
 int main()
 {
-    int escolha, escolha2, objeto, D3, faces, qtd;
-    float num,operacao, elevacao, i,j, raio, altura, alturaface, base, lado, area, volume, capital, montante, juros, indice, tempo, numero;
+    int escolha, escolha2, objeto, D3, faces, qtd, grau;
+    float num,operacao, elevacao, i,j, raio, altura, alturaface, base, lado, area, volume, capital, montante, juros, indice, tempo, numero,raizquadrada, x, x2, x3, y, a, b, c;
     double nums;
     char escolha3;
     printf("bem vindo a caluladora de matematica\n");
@@ -199,7 +199,23 @@ int main()
 
         case 6:
         {
-        
+            printf("digite o indice, tempo em meses e capital original \n");
+            scanf("%f %f %f", &indice, &tempo, &capital);
+             
+         printf("juros 1 - simples ou 2 - compostos? \n");
+         scanf("%d", &escolha2);
+        if( escolha2==1) 
+         {
+             juros = capital*tempo*indice;
+             montante = juros +capital;
+             printf("o juros eh de %f e o montante eh de : %f", juros,montante);
+         }
+         else
+         {
+             juros = capital * powf(1+indice,tempo);
+             montante = juros +capital;
+             printf("o juros eh de %f e o montante eh de : %f", juros, montante);
+         }
         }
         break;  
 
@@ -211,7 +227,55 @@ int main()
 
         case 8:
         {
-        
+            printf("equacao de 1 grau ou 2 grau?");
+            scanf("%d", &grau);
+            
+            switch(grau)
+            {
+                 case 1:
+                 printf("digite o coeficiente de x e y, e digite c");
+                 scanf("%f %f %f", &x, &y, &c);
+                
+                if(x ==0 || y ==0)
+                {
+                    printf("isso nao eh possivel");
+                    break;
+                }
+                else {
+                    y=0;
+                    printf("raiz da equacao eh: %f \n", -(c/x));
+                    printf("a forma simplificada da equacao eh %f + %f / %f \n", -(c/x), c, y);
+                }
+                
+                
+                 break;
+                 
+                 case 2:
+                     printf("digite o coeficiente de x², x e y, e digite c");
+                     scanf("%f %f %f %f", &x2 , &x, &y, &c);
+                     
+                     if(y ==0 ||( x ==0 && x2 ==0))
+                {
+                    printf("isso nao eh possivel");
+                    break;
+                }
+                
+                else {
+                raizquadrada = sqrt(powf(x,2)- 4* c * x2);
+                printf(" x1 eh %f x2 eh %f", (-x - raizquadrada)/(2 * x2), (-x + raizquadrada)/(2 * x2) );
+            
+                printf("a forma simplificada da equacao eh = %fx² + %fx + %f / %f \n",x2,x,c,y );
+                }
+                
+                
+                
+                 break;
+                 
+                 default :
+                 printf("esse progama nao eh tao complexo");
+                 break;
+            }
+         
         }
         break;  
         
