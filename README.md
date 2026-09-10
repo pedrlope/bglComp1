@@ -1,57 +1,80 @@
 # BGL COMP1
 
 
-
 #include <stdio.h>
 #include <stdio.h>
 #include <math.h>
 #define PI 3.14
 int main()
 {
-    int escolha, escolha2, objeto, D3, faces;
-    float num, sum, sub, mul, di, elevacao, i,j, raio, altura, alturaface, base, lado, area, volume;
+    int escolha, escolha2, objeto, D3, faces, qtd;
+    float num,operacao, elevacao, i,j, raio, altura, alturaface, base, lado, area, volume, capital, montante, juros, indice, tempo, numero;
     double nums;
     char escolha3;
     printf("bem vindo a caluladora de matematica\n");
     printf("digite qual operacao deseja fazer\n");
-    printf("1 - soma  2 - subtracao 3 - multiplicacao 4 - divisao 5 - formulas geometricas \n");
+    printf("1 - Soma.  2 - Subtracao. 3 - Multiplicacao. 4 - Divisao. 5 - Formulas Geometricas. 6 - Investimento. 7- Equações Complexas. 8 - Funcao \n");
     scanf("%d", &escolha);
-    
+    numero=0;
     switch(escolha)
     {
         case 1:
         
-            printf("digite os numeros desejados\n");
-            scanf("%f" "%f", &i, &j);
-            sum= i+j;
-            printf("a soma eh %f \n", sum);
+            printf("digite quantidade de numeros a somar\n");
+            scanf("%d", &qtd);
+
+            for(qtd;qtd >0;qtd--)
+                {
+                    printf("digite o valor %d\n", qtd);
+                    scanf("%f", &numero);
+                    operacao+=numero;
+                }
+           printf("a Soma eh %f \n", operacao);
         
         break;
         
         case 2:
 
-            printf("digite os numeros desejados\n");
-            scanf("%f" "%f", &i, &j );
-            sub= i-j;
-            printf("a subtracao eh %f \n", sub);
+            printf("digite quantidade de numeros a subtrair\n");
+            scanf("%d", &qtd);
+
+            for(qtd;qtd >0;qtd--)
+                {
+                    printf("digite o valor %d\n", qtd);
+                    scanf("%f", &numero);
+                    operacao-=numero;
+                }
+           printf("a Subtracao eh %f \n", operacao);
         
         break;
         
         case 3:
         
-            printf("digite os numeros desejados\n");
-            scanf("%f"  "%f", &i, &j);
-            mul= i*j;
-            printf("a multiplicacao eh %f \n", mul);
+            printf("digite quantidade de numeros a multiplicar\n");
+            scanf("%d", &qtd);
+
+            for(qtd;qtd >0;qtd--)
+                {
+                    printf("digite o valor %d\n", qtd);
+                    scanf("%f", &numero);
+                    operacao*=numero;
+                }
+           printf("a Multiplicacao eh %f \n", operacao);
         
         break;
         
         case 4:
         
-            printf("digite os numeros desejados\n ");
-            scanf("%f"  "%f", &i, &j);
-            di= i/j;
-            printf("a divisao eh %f \n", di);
+            printf("digite quantidade de numeros a dividir\n");
+            scanf("%d", &qtd);
+
+            for(qtd;qtd >0;qtd--)
+                {
+                    printf("digite o valor %d\n", qtd);
+                    scanf("%f", &numero);
+                    operacao/=numero;
+                }
+           printf("a Divisao eh %f \n", operacao);
         
         break;
         
@@ -78,14 +101,14 @@ int main()
             }
             else
             {
-                sum=0;
+                
                 for(objeto; objeto>0;objeto--)
                 {
                     printf("digite o valor do lado %d \n", objeto);
                     scanf("%lf", &nums);
-                    sum+=nums;
+                    operacao+=nums;
                 }
-                printf("perimetro eh %f \n", sum);
+                printf("perimetro eh %f \n", operacao);
             }
             break;
             
@@ -173,6 +196,25 @@ int main()
             break;
         }
         break;
+
+        case 6:
+        {
+        
+        }
+        break;  
+
+        case 7:
+        {
+        
+        }
+        break;  
+
+        case 8:
+        {
+        
+        }
+        break;  
+        
         
         default :
         printf("essa opcao nao eh possivel\n");
