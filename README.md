@@ -10,7 +10,7 @@ int main()
     int escolha, escolha2, objeto, D3, faces, qtd, grau;
     float num,operacao, elevacao, i,j, raio, altura, alturaface, base, lado, area, volume, capital, montante, juros, indice, tempo, numero,raizquadrada, x, x2, x3, y, a, b, c;
     double nums;
-    char escolha3;
+    char escolha3, sinal;
     printf("bem vindo a caluladora de matematica\n");
     printf("digite qual operacao deseja fazer\n");
     printf("1 - Soma.  2 - Subtracao. 3 - Multiplicacao. 4 - Divisao. 5 - Formulas Geometricas. 6 - Investimento. 7- Equações Complexas. 8 - Funcao \n");
@@ -242,10 +242,10 @@ int main()
                     break;
                 }
                 else {
-                    y=0;
+
                     printf("raiz da equacao eh: %f \n", -(c/x));
-                    printf("a forma simplificada da equacao eh %f + %f / %f \n", -(c/x), c, y);
-                }
+                
+                    }
                 
                 
                  break;
