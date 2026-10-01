@@ -1,0 +1,138 @@
+# LISTA
+
+
+
+#include <stdio.h>
+
+int main()
+
+{
+
+
+ void exercicio1()
+{
+    int numerador,numero;
+numero = 1;
+numerador = 1; 
+
+for (numerador; numerador !=11; numero ++)
+{
+if (numero == 10)
+{
+    printf("%d X %d = %d\n", numerador, numero, numerador*numero);
+numerador++;
+numero= 1;
+}if(numerador != 11)
+{
+  printf("%d X %d = %d\n", numerador, numero, numerador*numero);
+}
+}
+}
+
+
+
+ void exercicio2()
+ {
+     int num, asterisco;
+    asterisco = 1;
+     printf("olá, digite o numero \n");
+     scanf("%d", &num);
+     for(num; num>0; num--)
+     {
+     printf("%d\n", asterisco);
+     asterisco ++;
+     }
+     }
+
+void exercicio3()
+ {
+    int num, numero;
+    float soma;
+    printf("oi, digite o primeiro numero \n");
+    scanf("%d", &num);
+    
+    for (num; num>0 ;num--)
+    {
+        printf("digite o numero \n");
+        scanf("%d", &numero);
+        soma+=numero;
+    }
+    printf("a soma eh %f", soma);
+}
+
+ 
+ void exercicio4()
+ {
+     int num,valor;
+     printf("olá, digite o numero e veja quantos primos tem de 2 até ele\n");
+     scanf("%d", &num);
+     
+     for(valor=3; valor<num; valor++)
+     {
+         if (valor%2==0 && valor!=2 || valor %3==0 && valor !=3 || valor%5==0  && valor !=5)
+        {
+            printf("não primo\n");
+            break;
+        }
+        else
+        {
+        printf("primo:%d\n", valor);
+        }
+     }
+ }
+ 
+ void exercicio5()
+ {
+     int notas,alunos, soma, contador;
+    float media;
+    bool variavel = true;
+    printf("digite o numero de alunos\n");
+    scanf("%d", &alunos);
+    
+    for(alunos; alunos>0; alunos--)
+    {
+        printf("digite as notas do %d aluno, para parar digite -1\n", alunos);
+        while(variavel)
+        {
+            scanf("%d", &notas);
+            soma+= notas;
+            media = soma+1/contador;
+            if(notas == -1)
+            {
+                variavel =false;
+            }
+            contador ++;
+        }
+        variavel = true;
+        printf("media do aluno %f eh: ", media);
+    }
+ }
+ 
+ void exercicio6()
+ {
+     
+ }
+ 
+ void exercicio7()
+ {
+     
+ }
+ 
+ void exercicio8()
+ {
+     
+ }
+ 
+ void exercicio9()
+ {
+     
+ }
+ 
+ void exercicio10()
+ {
+     
+ }
+ 
+ 
+}
+
