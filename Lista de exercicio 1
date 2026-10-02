@@ -192,7 +192,48 @@ for (num; num>0; num--)
  
  void exercicio10()
  {
-     
+     int numero, formula, numerador, cont, variavel;
+    
+    printf("digite o numero\n");
+    scanf("%d", &numero);
+    cont =1;
+    
+     printf("%d = a ", numero); 
+    for(numerador = 2; numerador<=numero; numerador)
+    {
+              
+               
+        formula = numero%numerador;
+         
+        if(formula == 0)
+        {
+            cont++;
+            if (numerador == numero)
+            {
+                printf("%d", numerador);
+                break;
+            }
+         numero = numero/numerador;
+        printf("%d * ", numerador);
+        
+        
+        numerador = 2;
+        
+        }
+        else
+        {
+
+            numerador++;
+            cont =1;
+        }
+        
+                
+    }
+ 
+  /*
+    tem erros nesse programa: a impressão está incorreta, pois não consegui fazer o formato pedido, o resto está certo
+    */
+ 
  }
  
  
