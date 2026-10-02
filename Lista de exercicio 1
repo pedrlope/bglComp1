@@ -2,6 +2,7 @@
 
 
 
+#include <math.h>
 #include <stdio.h>
 
 int main()
@@ -33,14 +34,20 @@ numero= 1;
 
  void exercicio2()
  {
-     int num, asterisco;
-    asterisco = 1;
+    int linha, coluna, contador;
+    contador = 0;
      printf("olá, digite o numero \n");
-     scanf("%d", &num);
-     for(num; num>0; num--)
+     scanf("%d", &linha);
+     for(linha; linha>0; linha--)
      {
-     printf("%d\n", asterisco);
-     asterisco ++;
+         printf("\n*");
+         
+     coluna =contador;
+     for(coluna; coluna>0; coluna--)
+     {
+         printf("*");
+     }
+     contador ++;
      }
      }
 
@@ -110,12 +117,67 @@ void exercicio3()
  
  void exercicio6()
  {
-     
+     int num, variavel, numerador;
+    
+    printf("digite o numero de digitos\n");
+    scanf("%d", &num);
+    numerador = 1;
+    variavel = 0;
+    for(num; num>0;num--)
+    {
+        while(variavel<numerador)
+        {
+            if(variavel!=0)
+            {
+            printf("%d", variavel);
+            }
+            variavel++;
+        }
+        printf("%d\n", numerador);
+        while(variavel!=0 && variavel!=1)
+        {
+
+            printf("%d", variavel-1);
+            variavel --;
+        }
+        variavel = 1;
+        numerador++;
+    } 
+    
+    /*
+    tem erros nesse programa: a impressão está incorreta, pois não consegui fazer o formato pedido, o resto está certo
+    */
  }
  
  void exercicio7()
  {
-     
+     int num, cont, numerador, formula, formula2;
+  printf("digite um  numero\n");
+  scanf("%d", &num);
+  cont = 1;
+  numerador = 2;
+
+for (num; num>0; num--)
+{
+    formula = (pow(2,numerador))-1;
+    formula2 = pow(2,numerador-1);
+    while(formula%cont == 0 )
+    
+    {
+        
+        if(cont <= formula && formula2>1)
+        {
+            printf("%d\n", formula*formula2);
+            break;
+        }
+        cont++;
+    }
+
+    numerador++;
+}
+    /*
+    tem erros nesse programa: está lendo mais numeros do que deveria, e não  está corretamente retirando os não-perfeitos    
+    */ 
  }
  
  void exercicio8()
@@ -135,4 +197,3 @@ void exercicio3()
  
  
 }
-
