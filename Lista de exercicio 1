@@ -113,6 +113,9 @@ void exercicio3()
         variavel = true;
         printf("media do aluno %f eh: ", media);
     }
+    /*
+    tem um problema nesse codigo: pelo jeito não chama bool as variaveis booleanas, mudar depois
+    */
  }
  
  void exercicio6()
